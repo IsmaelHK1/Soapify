@@ -1,6 +1,6 @@
 # soapify
 
-A new Flutter project.
+A little App for earing some good music as Spotify but its more rude XD.
 
 ## Getting Started
 
