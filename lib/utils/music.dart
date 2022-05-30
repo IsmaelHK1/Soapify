@@ -15,9 +15,9 @@ createMusic(String title, String singer, String imagePath, String urlSong) {
   MusicList.add(music);
 }
 addMusic(){
-  createMusic('Nyan Cat', 'AI', 'lib/assets/img/nyancat.jpg', 'assets/song/nyan_cat_original.mp3');
-  createMusic('Petit Déjeuner', 'MisterV', 'lib/assets/img/misterV_Album.jpg', 'assets/song/petit_dejeuner.mp3');
-  createMusic( 'Cabeza', 'Oboy', 'lib/assets/img/oboy_album.jpg', 'assets/song/cabeza.mp3');
+  createMusic('Nyan Cat', 'AI', 'lib/assets/img/nyancat.jpg', 'lib/assets/song/nyan_cat_original.mp3');
+  createMusic('Petit Déjeuner', 'MisterV', 'lib/assets/img/misterV_Album.jpg', 'lib/assets/song/petit_dejeuner.mp3');
+  createMusic( 'Cabeza', 'Oboy', 'lib/assets/img/oboy_album.jpg', 'lib/assets/song/cabeza.mp3');
 }
 
 List<Music> MusicList = [];

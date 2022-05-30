@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:soapify/main.dart';
+import 'package:soapify/utils/audio.dart';
 import 'package:soapify/utils/music.dart';
+import 'package:soapify/utils/audio.dart';
+import 'package:just_audio/just_audio.dart';
 
 class AudioPage extends StatefulWidget {
   AudioPage({Key? key}) : super(key: key);
@@ -36,19 +40,23 @@ class _AudioPageState extends State<AudioPage> {
               setState(() {
                 if(counter > 0) {
                   counter--;
+                  _isPlaying = true;
+                  play(_isPlaying, counter);
                 }
               });
             },
             ),
           IconButton(
             icon : Icon(
-              (_isPlaying) ? Icons.play_arrow : Icons.pause,
+              (_isPlaying) ? Icons.pause : Icons.play_arrow,
             ), 
             iconSize: 45,
             color : Colors.white,
             onPressed: () {
               setState(() {
+                
                 _isPlaying = !_isPlaying;
+                play(_isPlaying, counter, first: false);
               });
             },
             ),
@@ -60,6 +68,8 @@ class _AudioPageState extends State<AudioPage> {
               setState(() {
                 if(counter < MusicList.length - 1) {
                   counter++;
+                  _isPlaying = true;
+                  play(_isPlaying, counter);
                 }
               });
             },

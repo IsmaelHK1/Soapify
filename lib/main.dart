@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:soapify/utils/audio.dart';
 import 'package:soapify/views/audiopage.dart';
 import 'package:soapify/utils/music.dart';
 
@@ -56,5 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
 Future load(BuildContext context) async {
   await addMusic();
+  await play(true, 0);
   Future.delayed(Duration(seconds: 5), await Navigator.push(context , MaterialPageRoute(builder: (context) => AudioPage())));
 }
